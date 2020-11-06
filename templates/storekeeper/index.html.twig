@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StorekeeperController!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="/stack-admin/app-assets/css/pages/app-invoice.min.css">
+{% endblock %}
+{% block body %}
+<body class="vertical-layout vertical-menu-modern 2-columns pace-done" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+    {% include 'menu.html.twig' %}
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+
+            </div>
+            <div class="content-body"><!-- App invoice wrapper -->
+                <section class="app-invoice-wrapper">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-5 col-12 printable-content">
+                            <!-- using a bootstrap card -->
+                            <div class="card">
+                                <!-- card body -->
+                                <div class="card-body p-2">
+                                    <!-- card-header -->
+                                    <div class="card-header p-0">
+                                        <div class="invoice-logo-title row">
+                                            <div class="col-6 d-flex flex-column justify-content-center align-items-start">
+                                                <h2 class="text-primary">Boulangerie</h2>
+                                                <span>7 rue de l'aqueduc, Haguenau</span>
+                                            </div>
+                                            <div class="col-6 d-flex justify-content-end invoice-logo">
+                                                <img src="/stack-admin/app-assets/images/logo/pixinvent-logo.png" alt="company-logo" height="46"
+                                                     width="164">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- invoice logo and title -->
+                                    <hr class="my-1">
+                                    <!-- invoice address and contacts -->
+                                    <div class="row invoice-adress-info">
+                                        <div class="col-6 to-info">
+                                            <div class="info-title mb-1">
+                                                <h5 class="mb-1"><i class="fa fa-info"></i> Informations</h5>
+                                            </div>
+                                            <div class="company-name mb-1">
+                                                <span class="text-muted">Pixinvent PVT.LTD</span>
+                                            </div>
+                                            <div class="company-address mb-1">
+                                                <span class="text-muted">9205 Whitemarsh Street New York, NY 10002</span>
+                                            </div>
+                                            <div class="company-email mb-1">
+                                                <span class="text-muted">hello@clevision.net</span>
+                                            </div>
+                                            <div class="company-phone  mb-1">
+                                                <span class="text-muted">601-678-8022</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 from-info">
+                                            <div class="info-title mb-1">
+                                                <h5 class="mb-1"><i class="fa fa-calendar-check-o"></i> Horaires</h5>
+                                            </div>
+                                            <div class="company-name mb-1">
+                                                <span class="text-muted">Clevision PVT.LTD</span>
+                                            </div>
+                                            <div class="company-address mb-1">
+                                                <span class="text-muted">9205 Whitemarsh Street New York, NY 10002</span>
+                                            </div>
+                                            <div class="company-email  mb-1 mb-1">
+                                                <span class="text-muted">hello@clevision.net</span>
+                                            </div>
+                                            <div class="company-phone  mb-1">
+                                                <span class="text-muted">601-678-8022</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--product details table -->
+                                    <hr class="my-1">
+                                    <div class="">
+                                        <div class="row">
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- invoice total -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- buttons section -->
+                        <div class="col-xl-7 col-md-7 col-12">
+                            <section id="simple-user-cards" class="row">
+                                <div class="col-12">
+                                    <h4 class="text-uppercase"><i class="fa fa-shopping-basket"></i> Produits</h4>
+                                    <p>95 produits disponibles</p>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-12">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <div class="card-body">
+                                                <img src="/stack-admin/app-assets/images/portrait/medium/avatar-m-4.png" class="height-150" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Michelle Howard</h4>
+                                                <h6 class="card-subtitle text-muted">Managing Director</h6>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
+                                                <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-12">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <div class="card-body">
+                                                <img src="/stack-admin/app-assets/images/portrait/medium/avatar-m-1.png" class="height-150" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Joseph Ryan</h4>
+                                                <h6 class="card-subtitle text-muted">Marketing Head</h6>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
+                                                <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-12">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <div class="card-body">
+                                                <img src="/stack-admin/app-assets/images/portrait/medium/avatar-m-6.png" class="height-150" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Frances Butler</h4>
+                                                <h6 class="card-subtitle text-muted">Technical Lead</h6>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
+                                                <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-12">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <div class="card-body">
+                                                <img src="/stack-admin/app-assets/images/portrait/medium/avatar-m-5.png" class="height-150" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Andrew Davis</h4>
+                                                <h6 class="card-subtitle text-muted">UI/UX Designer</h6>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
+                                                <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-12">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <div class="card-body">
+                                                <img src="/stack-admin/app-assets/images/portrait/medium/avatar-m-6.png" class="height-150" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Frances Butler</h4>
+                                                <h6 class="card-subtitle text-muted">Technical Lead</h6>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
+                                                <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-12">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <div class="card-body">
+                                                <img src="/stack-admin/app-assets/images/portrait/medium/avatar-m-5.png" class="height-150" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Andrew Davis</h4>
+                                                <h6 class="card-subtitle text-muted">UI/UX Designer</h6>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
+                                                <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+            </div>
+            </section>
+        </div>
+    </div>
+</body>
+</div>
+{% endblock %}

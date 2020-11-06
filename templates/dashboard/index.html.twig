@@ -1,64 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DashboardController!{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block body %}
-    <nav class="header-navbar navbar-expand-sm navbar navbar-with-menu navbar-dark navbar-shadow border-grey border-lighten-2 navbar-brand-center">
-        <div class="navbar-wrapper">
-            <div class="navbar-header">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item mobile-menu d-md-none float-left">
-                        <button class="nav-link menu-toggle hamburger hamburger--arrow js-hamburger is-active"><span class="hamburger-box"></span><span class="hamburger-inner"></span></button>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index-2.html" class="navbar-brand nav-link"><img src="stack-admin/app-assets/images/logo/stack-logo-light.png" alt="branding logo"></a>
-                    </li>
-                    <li class="nav-item d-md-none float-right"><a data-toggle="collapse" data-target="#navbar-mobile5" class="nav-link open-navbar-container"><i class="icon-ellipsis pe-2x icon-rotate-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="navbar-container content">
-                <div id="navbar-mobile5" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i>Alimentation</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-book"></i>Culture</a></li>
+<body>
+    {% include 'menu.html.twig' %}
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#"><i class="fa fa-shopping-basket"></i> Alimentation</a>
-                                <div class="dropdown-divider"></div>
 
-                                <a class="dropdown-item" href="#"><i class="fa fa-book"></i> Culture</a>
-                                <div class="dropdown-divider"></div>
-
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown dropdown-language nav-item"><a id="dropdown-flag5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link"><i class="flag-icon flag-icon-gb"></i><span class="selected-language">English</span><i class="caret"></i></a>
-                            <div aria-labelledby="dropdown-flag5" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i class="flag-icon flag-icon-gb"></i> English</a><a href="#" class="dropdown-item"><i class="flag-icon flag-icon-es"></i> Spanish</a><a href="#" class="dropdown-item"><i class="flag-icon flag-icon-pt"></i> Portuguese</a>
-                                <a href="#" class="dropdown-item"><i class="flag-icon flag-icon-fr"></i> French</a>
-                            </div>
-                        </li>
-                        <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online"><img src="../../../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span>
-                                <h6 class="user-name"> John Doe</h6><i class="caret"></i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a href="#" class="dropdown-item"><i class="feather icon-user"></i> Edit Profile</a>
-                                <a href="#" class="dropdown-item"><i class="feather icon-mail"></i> My Inbox</a>
-                                <a href="#" class="dropdown-item">
-                                    <i class="feather icon-check-square"></i> Task</a>
-                                <a href="#" class="dropdown-item"><i class="feather icon-message-square"></i> Calender</a>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item"><i class="feather icon-power"></i> Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+</body>
 {% endblock %}

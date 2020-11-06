@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SearchController!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="/stack-admin/app-assets/css/pages/users.min.css">
+{% endblock %}
+{% block body %}
+    <body class="vertical-layout vertical-menu-modern 2-columns pace-done" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+    <!-- BEGIN: Content-->
+    {% include 'menu.html.twig' %}
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="row">
+                    <div class="col-8">
+                        <section id="user-profile-cards-with-cover-image" class="row">
+                            <div class="col-12">
+                                <h4 class="text-uppercase">Liste des commerçants</h4>
+                                <p>User profile cards with Cover Image in border &amp; shadow variant.</p>
+                            </div>
+                            {% include 'storekeeper-card.html.twig' %}
+                            {% include 'storekeeper-card.html.twig' %}
+                            {% include 'storekeeper-card.html.twig' %}
+                            {% include 'storekeeper-card.html.twig' %}
+
+
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <p>MAPS</p>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    </body>
+
+{% endblock %}
