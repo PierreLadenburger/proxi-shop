@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription Commerce{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="/stack-admin/app-assets/css/core/colors/palette-gradient.min.css">
     <link rel="stylesheet" type="text/css" href="/stack-admin/app-assets/css/pages/login-register.min.css">
@@ -25,14 +25,14 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form class="form-horizontal form-simple" action="{{ path('app_register') }}" novalidate="" method="post">
+                                        <form class="form-horizontal form-simple" action="{{ path('app_register_shop') }}" novalidate="" method="post">
                                             <fieldset class="form-group position-relative has-icon-left mb-1">
-                                                <input type="text" class="form-control form-control-lg" name="user-name" id="user-name" placeholder="Nom">
+                                                <input type="text" class="form-control form-control-lg" name="user-name" id="shop-name" placeholder="Nom">
                                                 <div class="form-control-position">
                                                     <i class="fa fa-user"></i>
                                                 </div>
                                             </fieldset>
-                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                           <!-- <fieldset class="form-group position-relative has-icon-left mb-1">
                                                 <input type="email" class="form-control form-control-lg" name="user-email" id="user-email" placeholder="Email" required="">
                                                 <div class="form-control-position">
                                                     <i class="fa fa-at"></i>
@@ -43,7 +43,7 @@
                                                 <div class="form-control-position">
                                                     <i class="fa fa-key"></i>
                                                 </div>
-                                            </fieldset>
+                                            </fieldset> -->
                                             <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-unlock-alt"></i> Inscription</button>
                                         </form>
                                     </div>

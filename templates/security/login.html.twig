@@ -26,16 +26,16 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form class="form-horizontal form-simple" action="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/html/ltr/vertical-modern-menu-template/index.html" novalidate>
-                                            <fieldset class="form-group position-relative has-icon-left mb-0">
-                                                <input type="text" class="form-control form-control-lg" id="user-name"
+                                        <form class="form-horizontal form-simple" action="{{ path('app_login') }}" method="post" novalidate>
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <input type="text" class="form-control form-control-lg" name="user-email" id="user-email"
                                                        placeholder="Email" required>
                                                 <div class="form-control-position">
                                                     <i class="fa fa-at"></i>
                                                 </div>
                                             </fieldset>
                                             <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="password" class="form-control form-control-lg" id="user-password"
+                                                <input type="password" class="form-control form-control-lg" name="user-password" id="user-password"
                                                        placeholder="Mot de passe" required>
                                                 <div class="form-control-position">
                                                     <i class="fa fa-key"></i>
@@ -48,6 +48,7 @@
                                                 <div class="col-sm-6 col-12 text-center text-sm-right"><a href="recover-password.html"
                                                                                                           class="card-link">Mot de passe oublié ?</a></div>
                                             </div>
+                                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                                             <button type="submit" class="btn btn-primary btn-lg btn-block"><i
                                                         class="fa fa-unlock-alt"></i> Connexion</button>
                                         </form>

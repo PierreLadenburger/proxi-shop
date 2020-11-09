@@ -41,6 +41,11 @@ class User implements UserInterface
      */
     private $username;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Shop::class, inversedBy="user")
+     */
+    private $shop;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -122,6 +127,18 @@ class User implements UserInterface
     public function setUsername(string $username): self
     {
         $this->username = $username;
+
+        return $this;
+    }
+
+    public function getShop(): ?Shop
+    {
+        return $this->shop;
+    }
+
+    public function setShop(?Shop $shop): self
+    {
+        $this->shop = $shop;
 
         return $this;
     }

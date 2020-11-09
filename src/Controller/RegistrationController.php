@@ -18,11 +18,21 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         $user = new User();
-        $form = $this->createForm(RegistrationFormType::class, $user);
+
+        if ($request->isMethod('POST')) {
+            $user->setUsername($request->request->get('user-name'));
+            $user->setEmail($request->request->get('user-email'));
+            $user->setPassword($passwordEncoder->encodePassword($user, $request->request->get('user-password')));
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+            return $this->redirectToRoute('dashboard');
+        }
+       /* $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // encode the plain password
+
             $user->setPassword(
                 $passwordEncoder->encodePassword(
                     $user,
@@ -36,10 +46,19 @@ class RegistrationController extends AbstractController
             // do anything else you need here, like send an email
 
             return $this->redirectToRoute('dashboard');
-        }
+        }*/
 
         return $this->render('registration/register.html.twig', [
-            'registrationForm' => $form->createView(),
+
+        ]);
+    }
+
+    /**
+     * @Route("/register/shop", name="app_register_shop")
+     */
+    public function register_shop(){
+        return $this->render('registration/register-shop.html.twig', [
+
         ]);
     }
 }

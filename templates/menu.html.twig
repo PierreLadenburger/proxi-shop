@@ -14,9 +14,9 @@
         <div class="navbar-container content">
             <div id="navbar-mobile5" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ path('storekeeper') }}"><i class="fa fa-shopping-basket"></i>Commerçants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i>Alimentation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-book"></i>Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('storekeeper') }}"><i class="fa fa-utensils"></i> Commerçants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i> Alimentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-book"></i> Culture</a></li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories</a>
@@ -34,13 +34,14 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="dropdown dropdown-language nav-item"><a id="dropdown-flag5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link"><i class="flag-icon flag-icon-gb"></i><span class="selected-language">English</span><i class="caret"></i></a>
-                        <div aria-labelledby="dropdown-flag5" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i class="flag-icon flag-icon-gb"></i> English</a><a href="#" class="dropdown-item"><i class="flag-icon flag-icon-es"></i> Spanish</a><a href="#" class="dropdown-item"><i class="flag-icon flag-icon-pt"></i> Portuguese</a>
-                            <a href="#" class="dropdown-item"><i class="flag-icon flag-icon-fr"></i> French</a>
-                        </div>
-                    </li>
-                    <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online"><img src="../../../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span>
-                            <h6 class="user-name"> John Doe</h6><i class="caret"></i></a>
+                {% if app.user %}
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_register_shop') }}"><i class="fa fa-shopping-basket"></i> Commerce</a></li>
+                    <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link">
+                            <span class="avatar avatar-online">
+                                <img src="/stack-admin/app-assets/images/portrait/small/avatar-s-1.png" alt="avatar">
+                                <i></i>
+                            </span>
+                            <h6 class="user-name"> {{ app.user.username }} </h6><i class="caret"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="#" class="dropdown-item"><i class="feather icon-user"></i> Edit Profile</a>
                             <a href="#" class="dropdown-item"><i class="feather icon-mail"></i> My Inbox</a>
@@ -48,9 +49,12 @@
                                 <i class="feather icon-check-square"></i> Task</a>
                             <a href="#" class="dropdown-item"><i class="feather icon-message-square"></i> Calender</a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item"><i class="feather icon-power"></i> Logout</a>
+                            <a href="{{ path('app_logout') }}" class="dropdown-item"><i class="fa fa-power-off"></i> Déconnexion</a>
                         </div>
                     </li>
+                {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_login') }}"><i class="fa fa-power-off"></i> Connexion</a></li>
+                {% endif %}
                 </ul>
             </div>
         </div>
